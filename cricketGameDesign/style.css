@@ -1,0 +1,48 @@
+*{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.center1{
+    background-color:white;
+    margin: auto;
+    border-style: ridge;
+    width: 100.9% !important;
+    border: 1px solid rgb(238, 231, 231);
+    padding: 10px;
+    text-align: center;
+}
+
+.center2{
+    background-color:white;
+    float: left;
+    width: 33.3%;
+    padding: 10px;
+    text-align: center;
+    }
+.center3{
+    background-color:white;
+    font-size: smaller;
+    float: left;
+    width: 40%;
+    padding-top: 10px;
+   padding-left: 25px;
+   padding-right: 10px ;
+
+    text-align: center;
+    }
+.center4{
+    background-color:white;
+    float: left;
+    width: 40%;
+    padding-top: 10px;
+    padding-right: 25px;
+
+    text-align: center;
+    }
+.centeratcenter{
+    background-color:white;
+float: left;
+width: 20%;
+padding: 10px;
+text-align: center;
+}
+    

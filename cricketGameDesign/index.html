@@ -1,0 +1,327 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Game Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+    <div class="cricket">
+        <div class="head">
+            <div class="column center1">
+                <h2><b>CRICKET 10</b></h2>
+               
+        </div>
+    </div>
+    <div class="secondRow">
+    <div class="row">
+        <div class="column center2">
+          <h2>TEAM 1 SCORE</h2>
+          <p id='ts1'>0</p>
+          <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="insertSomething()">
+           HIT 1
+          </button>
+        </div>
+        <div class="column center2">
+          <h2>TIMER</h2>
+          <p><h3>60</h3></p>
+        </div>
+        <div class="column center2">
+          <h2>TEAM 2 SCORE</h2>
+          <p id='ts2'>0</p>
+          <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="insertSecondPhase()">
+            HIT 2
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="thirdRow">
+        <div class="column center1">
+        <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="matchWinners()">   
+           GENERATE RESULTS
+           </button>
+    </div>
+    </div>
+    
+    <div class="fourthRow table-responsive-sm">
+        <div class="row">
+            <div class="column center3">
+              <h6>TEAM 1 SCORE BOARD</h6>
+              <table class="table table-bordered" >
+                <thead>
+                  <tr>
+                    <th scope="col">TEAM 1</th>
+                    <th scope="col">B1</th>
+                    <th scope="col">B2</th>
+                    <th scope="col">B3</th>
+                    <th scope="col">B4</th>
+                    <th scope="col">B5</th>
+                    <th scope="col">B6</th>
+                    <th scope="col">TOTAL</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr  id="ins">
+                        <th scope="row">PLAYER 1</th>
+                        <td ></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                 
+                        
+                      </tr>
+                      <tr>
+                        <th scope="row">PLAYER 2</th>
+                        <td ></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      
+                      </tr>
+                      <tr>
+                        <th scope="row">PLAYER 3</th>
+                        <td ></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      
+                      </tr>
+                      <tr>
+                        <th scope="row">PLAYER 4</th>
+                        <td ></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                       
+                      </tr>
+                      <tr>
+                        <th scope="row">PLAYER 5</th>
+                        <td ></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    
+                      </tr>
+                      <tr>
+                        <th scope="row">PLAYER 6</th>
+                        <td ></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        
+                      </tr>
+                      <tr>
+                        <th scope="row">PLAYER 7</th>
+                        <td ></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      
+                      </tr>
+                      <tr>
+                        <th scope="row">PLAYER 8</th>
+                        <td ></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      
+                      </tr>
+                      <tr>
+                        <th scope="row">PLAYER 9</th>
+                        <td ></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      
+                      </tr>
+                      <tr>
+                        <th scope="row">PLAYER 10</th>
+                        <td ></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="column centeratcenter">
+                <br><br>
+                <h4>MATCH WON BY</h4>
+                <p id="MW"></p>
+                <br>
+                <h4>MAN OF THE MATCH</h4>
+                <p id="MOM1"></p>
+                <p id="MOM2"></p>
+                <p id="MOM3"></p>
+
+            </div>
+            <div class="column center4">
+                <h6>TEAM 2 SCORE BOARD</h6>
+                <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col">TEAM 1</th>
+                        <th scope="col">B1</th>
+                        <th scope="col">B2</th>
+                        <th scope="col">B3</th>
+                        <th scope="col">B4</th>
+                        <th scope="col">B5</th>
+                        <th scope="col">B6</th>
+                        <th scope="col">TOTAL</th>
+                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">PLAYER 1</th>
+                        <td ></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                 
+                        
+                      </tr>
+                      <tr>
+                        <th scope="row">PLAYER 2</th>
+                        <td ></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      
+                      </tr>
+                      <tr>
+                        <th scope="row">PLAYER 3</th>
+                        <td ></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      
+                      </tr>
+                      <tr>
+                        <th scope="row">PLAYER 4</th>
+                        <td ></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                       
+                      </tr>
+                      <tr>
+                        <th scope="row">PLAYER 5</th>
+                        <td ></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    
+                      </tr>
+                      <tr>
+                        <th scope="row">PLAYER 6</th>
+                        <td ></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        
+                      </tr>
+                      <tr>
+                        <th scope="row">PLAYER 7</th>
+                        <td ></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      
+                      </tr>
+                      <tr>
+                        <th scope="row">PLAYER 8</th>
+                        <td ></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      
+                      </tr>
+                      <tr>
+                        <th scope="row">PLAYER 9</th>
+                        <td ></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      
+                      </tr>
+                      <tr>
+                        <th scope="row">PLAYER 10</th>
+                        <td ></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+            </div>
+          </div>  
+    </div>
+   <script src="index.js"></script>
+</body>
+</html>
